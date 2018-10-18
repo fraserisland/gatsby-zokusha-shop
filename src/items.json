@@ -1,0 +1,116 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "type": "Gear Knob",
+        "name": "The Classic",
+        "description": "Lorem ipsum aoy sadi sardines are nice in my tummy yummy this is a rhyme thadf sdf",
+        "keywords": [
+          "stuffed", "plush", "groot", "guardians of the galaxy"
+        ],
+        "image": "https://res.cloudinary.com/frasersolo/image/upload/v1537935593/zokusha/products/knob.jpg",
+        "age": [
+          "0", "+"
+        ],
+        "price": 31.99
+      },
+      {
+        "id": 2,
+        "type": "Cup Holder",
+        "name": "Kyusha Cup",
+        "description": "Lorem ipsum aoy sadi sardines are nice in my tummy yummy this is a rhyme thadf sdf",
+        "keywords": [
+          "stuffed", "plush", "groot", "guardians of the galaxy"
+        ],
+        "image": "https://res.cloudinary.com/frasersolo/image/upload/v1537935593/zokusha/products/horn.jpg",
+        "age": [
+          "0", "+"
+        ],
+        "price": 24.99
+      },
+      {
+        "id": 3,
+        "type": "Tsurikawa",
+        "name": "The Devilish",
+        "description": "Lorem ipsum aoy sadi sardines are nice in my tummy yummy this is a rhyme thadf sdf",
+        "keywords": [
+          "stuffed", "plush", "groot", "guardians of the galaxy"
+        ],
+        "image": "https://res.cloudinary.com/frasersolo/image/upload/v1537935592/zokusha/products/cupholder.jpg",
+        "age": [
+          "0", "+"
+        ],
+        "price": 19.99
+      },
+      {
+        "id": 4,
+        "type": "Misc",
+        "name": "Emergency Light",
+        "description": "Lorem ipsum aoy sadi sardines are nice in my tummy yummy this is a rhyme thadf sdf",
+        "keywords": [
+          "stuffed", "plush", "groot", "guardians of the galaxy"
+        ],
+        "image": "https://res.cloudinary.com/frasersolo/image/upload/v1537935600/zokusha/products/floor-mat.jpg",
+        "age": [
+          "0", "+"
+        ],
+        "price": 90.99
+      },
+      {
+        "id": 5,
+        "type": "Sticker",
+        "name": "Original Zokusha",
+        "description": "Lorem ipsum aoy sadi sardines are nice in my tummy yummy this is a rhyme thadf sdf",
+        "keywords": [
+          "stuffed", "plush", "groot", "guardians of the galaxy"
+        ],
+        "image": "https://res.cloudinary.com/frasersolo/image/upload/v1537935594/zokusha/products/tsurikawa.jpg",
+        "age": [
+          "0", "+"
+        ],
+        "price": 8.99
+      },
+      {
+        "id": 6,
+        "type": "Car",
+        "name": "RS13",
+        "description": "Lorem ipsum aoy sadi sardines are nice in my tummy yummy this is a rhyme thadf sdf",
+        "keywords": [
+          "stuffed", "plush", "groot", "guardians of the galaxy"
+        ],
+        "image": "https://res.cloudinary.com/frasersolo/image/upload/v1537935593/zokusha/products/taka-tomy.jpg",
+        "age": [
+          "0", "+"
+        ],
+        "price": 8.99
+      },
+      {
+        "id": 7,
+        "type": "Mats",
+        "name": "Black 'n White",
+        "description": "Lorem ipsum aoy sadi sardines are nice in my tummy yummy this is a rhyme thadf sdf",
+        "keywords": [
+          "stuffed", "plush", "groot", "guardians of the galaxy"
+        ],
+        "image": "https://res.cloudinary.com/frasersolo/image/upload/v1537935593/zokusha/products/sticker.jpg",
+        "age": [
+          "0", "+"
+        ],
+        "price": 39.99
+      },
+      {
+        "id": 8,
+        "type": "Horn",
+        "name": "Toyo",
+        "description": "Lorem ipsum aoy sadi sardines are nice in my tummy yummy this is a rhyme thadf sdf",
+        "keywords": [
+          "stuffed", "plush", "groot", "guardians of the galaxy"
+        ],
+        "image": "https://res.cloudinary.com/frasersolo/image/upload/v1538625223/drift-dark.jpg",
+        "age": [
+          "0", "+"
+        ],
+        "price": 5.99
+      }
+    ]
+}
