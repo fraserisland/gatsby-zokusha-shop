@@ -3,8 +3,9 @@
     height: 110px;
     display: flex;
     border-top: 1px solid white;
-    padding: 20px 0 0 0;
+    padding: 20px 0 20px 0;
 }
+
 
 .cart-card__img {
     object-fit: cover;

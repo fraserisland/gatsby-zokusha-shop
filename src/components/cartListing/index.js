@@ -17,6 +17,7 @@ const CartListing = () => (
             <h2 className="cart__title">My Bag</h2>
                 <div className="cart__card-holder">
                     {
+                        context.state.cartItems.length > 0 ?
                         (context.state.cartItems).sort(compare).map(item => {
                             return(  
                                 <div>
@@ -32,11 +33,13 @@ const CartListing = () => (
                                 </div>
                             )
                         })
+                        : 
+                        <p className="cart__no-items">no items</p>
                     }
                 </div>
                 <h4 className="cart__total">sub-total <span className="cart__dollars">$ {context.TotalCost()}</span></h4>
                 <div className="cart__button-holder">
-                    <div className="button cart__button" onClick={() => console.log('yo')}>Checkout</div>
+                    <button className="button" onClick={() => console.log('yo')}>Checkout</button>
                 </div>
             </div>
         )}
