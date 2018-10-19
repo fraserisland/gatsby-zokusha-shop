@@ -3,7 +3,8 @@ import './styles.css'
 
 const Banner = () => (  
     <div>
-        <img className="banner__img" src="https://res.cloudinary.com/frasersolo/image/upload/v1539838991/night-13.jpg"/>
+        <h2 className="cart__title">JUST YOUR LOCAL STREETERS</h2>
+        <img className="banner__img" src="https://res.cloudinary.com/frasersolo/image/upload/v1539855006/8666-good.jpg"/>
     </div>
 )
  

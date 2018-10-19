@@ -35,6 +35,12 @@
     margin: 4px 0 0;
 }
 
+.card__quantity {
+    position: relative;
+    bottom: 93px;
+    left: 93px;
+}
+
 .card__name {
     margin: 4px 0;
 }

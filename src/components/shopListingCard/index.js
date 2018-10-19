@@ -16,12 +16,13 @@ const ShopListingCard = (props) => {
                 <p className="card__name">{props.product.name}</p> 
                 <div className="card__desc">{props.product.description}</div>
                 <div className="card__price-button">
-                <button onClick={props.addItem}>add to cart</button>
- 
+                <button className="button" onClick={props.addItem}>add to cart</button>
+                <p className="card__price">${props.product.price}</p>
+
                     {props.quantity > 0 &&
-                        <p>Qty: {props.quantity}</p>
+                        <p className="card__title card__quantity">Qty: {props.quantity}</p>
                     }
-                    <p className="card__price">${props.product.price}</p>
+
                 </div>
             </div>
         </div>

@@ -71,6 +71,14 @@ export class CartProvider extends React.Component {
           this.setState({ cartItems: newCart })
           localStorage.setItem('cartItems', JSON.stringify(newCart))
           console.log(newCart)
+        },
+
+        TotalCost: () => {
+          let price = 0
+          this.state.cartItems.map(item => {
+            price += (item.price * item.quantity)
+          })
+          return price
         }
 
       }}>

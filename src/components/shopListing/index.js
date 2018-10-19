@@ -19,6 +19,7 @@ class ShopListing extends Component {
 
         return (  
             <div>
+            <h2 className="cart__title">SHOP</h2>
                 <MyContext.Consumer>
                     {(context) => (
                         <div  className="shop-listing__container">

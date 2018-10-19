@@ -2,3 +2,17 @@
     max-width: 800px;
     margin: 0 auto;
 }
+
+body {
+    background: #f2f7f7;
+    margin: 0;
+}
+
+.button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 1;
+}

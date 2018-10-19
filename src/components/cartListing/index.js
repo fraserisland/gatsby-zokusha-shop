@@ -8,9 +8,8 @@ function compare(a,b) {
     if (a.name > b.name)
       return 1;
     return 0;
-  }
+}
   
-
 const CartListing = () => (  
     <MyContext.Consumer>
         {(context) => (
@@ -35,7 +34,7 @@ const CartListing = () => (
                         })
                     }
                 </div>
-                <h4 className="cart__total">sub-total <span className="cart__dollars">$</span></h4>
+                <h4 className="cart__total">sub-total <span className="cart__dollars">$ {context.TotalCost()}</span></h4>
                 <div className="cart__button-holder">
                     <div className="button cart__button" onClick={() => console.log('yo')}>Checkout</div>
                 </div>
