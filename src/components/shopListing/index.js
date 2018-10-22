@@ -8,7 +8,7 @@ class ShopListing extends Component {
     cartQuantity = (cart, product) => {
         let quantity = null
         cart.map((cartItem) => {
-            if(product.id == cartItem.id){
+            if(product.id === cartItem.id){
                 quantity = cartItem.quantity
             }
         })

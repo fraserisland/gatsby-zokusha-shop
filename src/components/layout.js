@@ -2,13 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { CartProvider, MyContext } from './cartProvider'
 import NavBar from './navbar'
-import './styles.css'
 import Helmet from 'react-helmet'
+import './styles.css'
 
 const Layout = ({ children }) => (
       <CartProvider>
-        <Helmet>
-          <script src="https://js.stripe.com/v3/"></script>
+        <Helmet
+        title="Zokusha Tribe JDM shop"
+        meta={[
+          { name: 'description', content: 'Zokusha Tribe Shop' },
+          { name: 'keywords', content: 'zokusha, tribe, jdm, shakotan, cars, shop' },
+        ]}>
+          <html lang="en" />
         </Helmet>
         <div className="holder">
           <NavBar />

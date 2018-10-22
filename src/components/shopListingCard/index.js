@@ -9,7 +9,7 @@ const ShopListingCard = (props) => {
             <img className="card__img"
                 title={props.product.name}
                 src={props.product.image} 
-                alt="product image"
+                alt="product"
             />
             <div className="card__info">
                 <p className="card__title">{props.product.type}</p> 

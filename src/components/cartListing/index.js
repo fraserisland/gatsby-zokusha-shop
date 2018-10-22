@@ -1,6 +1,8 @@
 import React from 'react';
 import { MyContext } from '../cartProvider'
 import CartCard from '../cartCard'
+import Checkout from '../checkoutForm'
+
 
 function compare(a,b) {
     if (a.name < b.name)
@@ -14,7 +16,7 @@ const CartListing = () => (
     <MyContext.Consumer>
         {(context) => (
             <div>
-            <h2 className="cart__title">My Bag</h2>
+            <h2 className="cart__title">Cart</h2>
                 <div className="cart__card-holder">
                     {
                         context.state.cartItems.length > 0 ?
@@ -37,9 +39,9 @@ const CartListing = () => (
                         <p className="cart__no-items">no items</p>
                     }
                 </div>
-                <h4 className="cart__total">sub-total <span className="cart__dollars">$ {context.TotalCost()}</span></h4>
+                <h4 className="cart__total">sub-total <span className="cart__dollars">$ {context.TotalCost().toFixed(2)}</span></h4>
                 <div className="cart__button-holder">
-                    <button className="button" onClick={() => console.log('yo')}>Checkout</button>
+                    <Checkout />
                 </div>
             </div>
         )}

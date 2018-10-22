@@ -18,9 +18,10 @@ const NavBar = () => (
         <MyContext.Consumer>
             {(context) => (
                 <div className="navbar__container">
-                    <Link className="nav__link" to="/">home</Link>
-                    <Link className="nav__link" to="shop">shop</Link>
-                    <Link className="nav__link" to="cart"><img className="nav__cart" src={bag} /><div className="nav__cart-items"><span>{cartQuantity(context.state.cartItems)}</span></div></Link>
+                    <Link className="logo" to="/">ZokuSha</Link> 
+                    <Link className="nav__link" to="about">ABOUT</Link>
+                    <Link className="nav__link" to="shop">SHOP</Link>
+                    <Link className="nav__link" to="cart"><img alt="cart" className="nav__cart" src={bag} /><div className="nav__cart-items"><span>{cartQuantity(context.state.cartItems)}</span></div></Link>
                 </div>
             )}
         </MyContext.Consumer>

@@ -1,25 +1,78 @@
-import React, {Component} from 'react';
-import {CardElement, injectStripe} from 'react-stripe-elements';
+import React from "react"
 
-class CheckoutForm extends Component {
-  constructor(props) {
-    super(props);
-    this.submit = this.submit.bind(this);
+// hardcoded amount (in US cents) to charge users
+// you could set this variable dynamically to charge different amounts
+const amount = 2500
+
+// Below is where the checkout component is defined.
+// It has several functions and some default state variables.
+const Checkout = class extends React.Component {
+  state = {
+    disabled: false,
+    buttonText: "BUY NOW",
+    paymentMessage: "",
   }
 
-  async submit(ev) {
-    // User clicked submit
+  resetButton() {
+    this.setState({ disabled: false, buttonText: "Pay now" })
+  }
+
+  componentDidMount() {
+    this.stripeHandler = window.StripeCheckout.configure({
+      key: "pk_test_OiEWust5llK3pQZgO1vzEQwo",
+      closed: () => {
+        this.resetButton()
+      },
+    })
+  }
+
+  openStripeCheckout(event) {
+    event.preventDefault()
+    this.setState({ disabled: true, buttonText: "WAITING..." })
+    this.stripeHandler.open({
+      name: "Demo Product",
+      amount: amount,
+      description: "A product well worth your time",
+      token: token => {
+        fetch(`AWS_LAMBDA_URL`, {
+          method: "POST",
+          mode: "no-cors",
+          body: JSON.stringify({
+            token,
+            amount,
+          }),
+          headers: new Headers({
+            "Content-Type": "application/json",
+          }),
+        })
+          .then(res => {
+            console.log("Transaction processed successfully")
+            this.resetButton()
+            this.setState({ paymentMessage: "Payment Successful!" })
+            return res
+          })
+          .catch(error => {
+            console.error("Error:", error)
+            this.setState({ paymentMessage: "Payment Failed" })
+          })
+      },
+    })
   }
 
   render() {
     return (
-      <div className="checkout">
-        <p>Would you like to complete the purchase?</p>
-        <CardElement />
-        <button onClick={this.submit}>Send</button>
+      <div>
+        <button
+          className="button"
+          onClick={event => this.openStripeCheckout(event)}
+          disabled={this.state.disabled}
+        >
+          {this.state.buttonText}
+        </button>
+        {this.state.paymentMessage}
       </div>
-    );
+    )
   }
 }
 
-export default injectStripe(CheckoutForm);
+export default Checkout
